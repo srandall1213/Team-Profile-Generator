@@ -43,7 +43,7 @@ function init() {
     return inquirer.prompt(questions)
     .then((data) => {
         const htmlData = generateHTML(data); //may do this another way
-        writeToFile('dist/index.html', htmlData);
+        writeToFile('dist/index.html', htmlData); //put htmlData in place of data to do it that way ^^
     })
 };
 
