@@ -7,22 +7,22 @@ const questions = [
     {
         type: 'input',
         name: 'manager',
-        message: "What is the team manager's name?",
+        message: "What is the employee's name?",
     },
     {
         type: 'input',
         name: 'id',
-        message: 'What is the employee ID of the team manager?',
+        message: 'What is the employee ID?',
     },
     {
         type: 'input',
         name: 'email',
-        message: "What is the team manager's email address?",
+        message: "What is the employee's email address?",
     },
     {
         type: 'input',
         name: 'office',
-        message: 'What is the office number for the team manager?',
+        message: 'What is the office number for the employee?',
     }
     //add engineer>name/ID/email/GitHub username/back to menu
     //OR 
@@ -49,3 +49,4 @@ function init() {
 
 //Call to Initialize 
 init();
+
