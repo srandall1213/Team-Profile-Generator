@@ -1,9 +1,9 @@
 const fs = require('fs');
-const inquirer = require('inquirer');
-const generateHTML = require('./src/generateHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML');
+const inquirer = require('inquirer');
 const teamArray = [];
 
 const managerQuestions = () => {
@@ -46,8 +46,8 @@ const menu = () => {
             choices: ['Add engineer', 'Add intern', 'Finish']
         }
     ])
-    .then(getChoice => {
-        switch (getChoice.menu) {
+    .then(choice => {
+        switch (choice.menu) {
             case "Add engineer":
                 engineerQuestions();
                 break;
@@ -126,7 +126,7 @@ function writeToFile(fileName, data) {
     );
 };
 
-//Initialize HTML Function
+//Finish Questions & Generate HTML
 function finish() {
     const htmlData = generateHTML(teamArray);
     writeToFile('dist/index.html', htmlData);
@@ -135,4 +135,3 @@ function finish() {
 
 //Call Manager Questions First
 managerQuestions()
-
