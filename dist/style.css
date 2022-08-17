@@ -1,9 +1,10 @@
 :root {
-    --dark: #175676;
-    --maroon: #BA324F;
+    --dark: black;
+    --light: white;
     --red: #d62839;
-    --light: #cce6f4;
-    --blue: #4BA3C3;
+    --green: #34A853;
+    --blue: #4285F4;
+    --yellow: #FBBC05;
 }
 
 body {
@@ -12,20 +13,35 @@ body {
 
 .custom-jumbotron {
     background-color: var(--dark);
-    color: var(--red);
+    color: var(--light);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .card {
-    box-shadow: 10px 10px 10px rgb(81, 80, 80);
-    color: var(--blue);
+    box-shadow: 0px 0px 10px 5px rgb(81, 80, 80);
     margin: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.role {
+    color: var(--green);
+}
+
+.empID {
+    color: var(--yellow);
+}
+
+.email {
+    color: var(--blue);
+}
+
+.lastLine {
+    color: var(--red)
 }
 
 .card-header {
-    background-color: var(--maroon);
-    color: white;
-    font-size: 25px;
-    font-family: 'Barlow Condensed', sans-serif;
-    margin: 3px;
-    
+    background-color: var(--red);
+    color: var(--light);
+    font-size: 30px;
+    margin: 4px; 
 }

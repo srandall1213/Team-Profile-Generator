@@ -1,4 +1,4 @@
-//Function to organzie data to input in HTML
+//Function to organize data to input in HTML
 const getTeam = (team) => {
 
   const html = [];
@@ -10,10 +10,10 @@ const getTeam = (team) => {
               ${manager.name}
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">💼 Manager</li>
-              <li class="list-group-item">Employee ID: ${manager.id}</li>
-              <li class="list-group-item">Email: ${manager.email}</li>
-              <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+              <li class="list-group-item role">💼 Manager</li>
+              <li class="list-group-item empID">Employee ID: ${manager.id}</li>
+              <li class="list-group-item email">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+              <li class="list-group-item lastLine">Office Number: ${manager.officeNumber}</li>
             </ul>
           </div>
 
@@ -28,10 +28,10 @@ const getTeam = (team) => {
               ${engineer.name}
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">👓 Engineer</li>
-              <li class="list-group-item">Employee ID: ${engineer.id}</li>
-              <li class="list-group-item">Email: ${engineer.email}</li>
-              <li class="list-group-item">GitHub Username: ${engineer.userName}</li>
+              <li class="list-group-item role">👓 Engineer</li>
+              <li class="list-group-item empID">Employee ID: ${engineer.id}</li>
+              <li class="list-group-item email">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+              <li class="list-group-item lastLine">GitHub Username: <a target="_blank" class="lastLine" href="https://github.com/${engineer.userName}">${engineer.userName}</a></li>
             </ul>
           </div>
 
@@ -46,10 +46,10 @@ const getTeam = (team) => {
               ${intern.name}
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">🎓 Intern</li>
-              <li class="list-group-item">Employee ID: ${intern.id}</li>
-              <li class="list-group-item">Email: ${intern.email}</li>
-              <li class="list-group-item">School: ${intern.school}</li>
+              <li class="list-group-item role">🎓 Intern</li>
+              <li class="list-group-item empID">Employee ID: ${intern.id}</li>
+              <li class="list-group-item email">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+              <li class="list-group-item lastLine">School: ${intern.school}</li>
             </ul>
           </div>
 
@@ -57,7 +57,7 @@ const getTeam = (team) => {
     html.push(internHTML);
   }
 
-  //For...of loop 
+  //For...of loop to call the appropriate function
   for (employee of team) {
     if (employee.getRole() === "Manager") {
       getManager(employee);
@@ -74,6 +74,7 @@ const getTeam = (team) => {
 
 }
 
+//The main code for index.html
 function generateHTML(htmlData) {
   return `<!doctype html>
 <html lang="en">
@@ -90,19 +91,20 @@ function generateHTML(htmlData) {
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">      
 
   </head>
   <body>
 
-    <div class="jumbotron jumbotron-fluid custom-jumbotron"><h1 class="display-4 text-center">MY TEAM</h1></div>
+    <div class="jumbotron jumbotron-fluid custom-jumbotron"><h1 class="display-4 text-center">My Team</h1></div>
   
     <main> 
 
       <div class="container">
         <div class="row justify-content-around">
-
+            
           ${getTeam(htmlData)} 
+
         </div>
       </div>
     
