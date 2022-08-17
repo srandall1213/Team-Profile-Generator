@@ -5,7 +5,7 @@ test("we should get the name/id/email for the manager", () => {
     expect(manager.name).toBe('Sarah');
     expect(manager.id).toBe('123');
     expect(manager.email).toEqual('srandall1213@gmail.com');
-    expect(manager.officeNumber).toEqual('456');
+    expect(manager.office).toEqual('456');
 });
     
 test("we should get the name from getName()", () => {
@@ -20,8 +20,8 @@ test("we should get the email from getEmail()", () => {
     expect(manager.getEmail()).toEqual('srandall1213@gmail.com');
 });
 
-test("we should get the office number from getOfficeNumber()", () => {
-    expect(manager.getOfficeNumber()).toEqual('456');
+test("we should get the office number from getOffice()", () => {
+    expect(manager.getOffice()).toEqual('456');
 });
 
 test("we should get the role from getRole()", () => {
