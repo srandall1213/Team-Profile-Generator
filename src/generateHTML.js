@@ -13,7 +13,7 @@ const getTeam = (team) => {
               <li class="list-group-item role">💼 Manager</li>
               <li class="list-group-item empID">Employee ID: ${manager.id}</li>
               <li class="list-group-item email">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-              <li class="list-group-item lastLine">Office Number: ${manager.officeNumber}</li>
+              <li class="list-group-item lastLine">Office Number: ${manager.office}</li>
             </ul>
           </div>
 

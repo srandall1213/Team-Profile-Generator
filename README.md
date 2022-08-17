@@ -9,3 +9,4 @@ My motivation in completing this project was to apply what I learned this week a
 ![Team-Profile-Generator](./images/screenshot.png)
 
 ## Walkthrough Video Link
+https://drive.google.com/file/d/13boZOFypag0zniqqRx-Yb-0NviBQhrsd/view
